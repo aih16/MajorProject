@@ -1,6 +1,13 @@
 rapid automatic keyword extraction
+stemming normalizes text
 keyword extraction
+works based
+removing suffixes
 many libraries
+advanced technique
+word
+root
 one
+lemmatisation
 help
 difficult
