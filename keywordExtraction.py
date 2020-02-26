@@ -4,7 +4,7 @@ from rake_nltk import Rake
 def keywordExtraction():
     r = Rake()
 
-    # Opens file, reads data and stores as string 'data'
+    # Opens file, reads contents and stores in string 'data'
     with open("extractThis.txt", 'r') as file:
         data = file.read().replace('\n', '')
 
