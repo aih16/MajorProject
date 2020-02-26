@@ -13,17 +13,18 @@ def pullTweets():
     # Creating the API object and passing in auth information
     api = tweepy.API(auth)
 
-    # Using the API object to get tweets from timeline, storing it in public_tweets
+    # Using the API object to get tweets from timeline
     myTimeline_tweets = api.home_timeline()
 
     # foreach through all tweets pulled
     for tweet in myTimeline_tweets:
-        # printing the text stored inside the tweet object
-        print("Time of Tweet:")
-        print(tweet.created_at)
+        if 'RT @' not in myTimeline_tweets:
+            # printing the text stored inside the tweet object
+            print("Time of Tweet:")
+            print(tweet.created_at)
 
-        print("Twitter handle and place:")
-        print(tweet.user.screen_name, tweet.user.location)
+            print("Twitter handle and place:")
+            print(tweet.user.screen_name, tweet.user.location)
 
-        print(tweet.text)
-        print("")
+            print(tweet.text)
+            print("")
