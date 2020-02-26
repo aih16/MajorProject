@@ -15,6 +15,7 @@ def pullTweets():
 
     # Using the API object to get tweets from timeline, storing it in public_tweets
     myTimeline_tweets = api.home_timeline()
+
     # foreach through all tweets pulled
     for tweet in myTimeline_tweets:
         # printing the text stored inside the tweet object
