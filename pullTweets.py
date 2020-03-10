@@ -13,12 +13,15 @@ def pullTweets():
     # Creating the API object and passing in auth information
     api = tweepy.API(auth)
 
-
+    # Which twitter handle to pull from
     name = "realDonaldTrump"
     # Number of tweets to pull
-    tweetCount = 4
+    tweetCount = 10
+    # Pulls the extended tweet
+
     # Using the API object to get tweets from timeline
-    myTimeline_tweets = api.user_timeline(id=name, count=tweetCount)
+    # include_rts=False to remove all retweets, including Trump retweeting himself
+    myTimeline_tweets = api.user_timeline(id=name, count=tweetCount, tweet_mode='extended', include_rts=False)
 
     # foreach through all tweets pulled
     for tweet in myTimeline_tweets:
@@ -31,10 +34,12 @@ def pullTweets():
             print("Twitter handle and place:")
             print(tweet.user.screen_name, tweet.user.location)
 
-            print(tweet.text)
+            print(tweet.full_text)
             print("")
 
+            """
             outF = open("pulledTweets.txt", "w", encoding="utf8")
             # write line to output file
             outF.write(tweet.text + "\n")
             outF.close()
+            """
