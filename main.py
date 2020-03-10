@@ -1,5 +1,6 @@
 from pullTweets import pullTweets
 from keywordExtraction import keywordExtraction
+from sentimentAnalysis import sentimentAnalysis
 
 consumer_key = "6MhbZH5MI4Uxrl61LeSFhymkF"
 consumer_secret = "SVDcGLkrA8NCHIKH7bN5F8ZCxNUyxVE5zXQMSFMdjW9kKgSlWD"
@@ -8,6 +9,7 @@ access_token_secret = "8t91piYB8hXXvCwSmAT7FMdY9pPoOxRy6LFkAsDa1sK50"
 
 if __name__ == "__main__":
     pullTweets()
-    keywordExtraction()
+    # keywordExtraction()
+    # sentimentAnalysis()
 
 print("End")

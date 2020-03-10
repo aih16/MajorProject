@@ -18,6 +18,7 @@ def pullTweets():
 
     # foreach through all tweets pulled
     for tweet in myTimeline_tweets:
+        # pulls tweets ignoring retweets
         if 'RT @' not in myTimeline_tweets:
             # printing the text stored inside the tweet object
             print("Time of Tweet:")
@@ -28,3 +29,8 @@ def pullTweets():
 
             print(tweet.text)
             print("")
+
+            outF = open("demofile2.txt", "w")
+            # write line to output file
+            outF.write(tweet.text + "\n")
+            outF.close()

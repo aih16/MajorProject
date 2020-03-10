@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f98c28f8-2a9e-4077-8fe0-a027c96df670" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Aidan_PC.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extractThis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/keywordExtraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/keywordExtraction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pullTweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/pullTweets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ranked_phrases.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trumpTweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/sentimentAnalysis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +37,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RunManager" selected="Python.main">
@@ -96,38 +104,42 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582734762429">
+    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582759486527">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582734762429" />
+    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582759486527" />
+    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583171609736">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583171609736" />
     <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1581169482326">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1581169482326" />
-    <state width="1899" height="290" key="GridCell.Tab.0.bottom" timestamp="1582736345264">
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom" timestamp="1583182955084">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="290" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582736345264" />
-    <state width="1899" height="290" key="GridCell.Tab.0.center" timestamp="1582736345264">
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583182955084" />
+    <state width="1899" height="290" key="GridCell.Tab.0.center" timestamp="1583182955083">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="290" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582736345264" />
-    <state width="1899" height="290" key="GridCell.Tab.0.left" timestamp="1582736345263">
+    <state width="1899" height="290" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583182955083" />
+    <state width="1899" height="290" key="GridCell.Tab.0.left" timestamp="1583182955083">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="290" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582736345263" />
-    <state width="1899" height="290" key="GridCell.Tab.0.right" timestamp="1582736345264">
+    <state width="1899" height="290" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583182955083" />
+    <state width="1899" height="290" key="GridCell.Tab.0.right" timestamp="1583182955083">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="290" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582736345264" />
+    <state width="1899" height="290" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583182955083" />
     <state x="706" y="130" key="SettingsEditor" timestamp="1582119043883">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="706" y="130" key="SettingsEditor/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582119043883" />
-    <state x="655" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1582733678509">
+    <state x="655" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1582759378908">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="655" y="364" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582733678509" />
+    <state x="655" y="364" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582759378908" />
     <state x="769" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581169490382">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

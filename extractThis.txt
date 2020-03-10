@@ -1,3 +1,0 @@
-Keyword extraction is not that difficult after all. There are many libraries that can help you with keyword extraction. Rapid automatic keyword extraction is one of those.
-Stemming normalizes text by removing suffixes.
-Lemmatisation is a more advanced technique which works based on the root of the word.
