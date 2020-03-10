@@ -13,8 +13,12 @@ def pullTweets():
     # Creating the API object and passing in auth information
     api = tweepy.API(auth)
 
+
+    name = "realDonaldTrump"
+    # Number of tweets to pull
+    tweetCount = 4
     # Using the API object to get tweets from timeline
-    myTimeline_tweets = api.home_timeline()
+    myTimeline_tweets = api.user_timeline(id=name, count=tweetCount)
 
     # foreach through all tweets pulled
     for tweet in myTimeline_tweets:
@@ -30,7 +34,7 @@ def pullTweets():
             print(tweet.text)
             print("")
 
-            outF = open("demofile2.txt", "w")
+            outF = open("pulledTweets.txt", "w")
             # write line to output file
             outF.write(tweet.text + "\n")
             outF.close()
