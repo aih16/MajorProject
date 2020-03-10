@@ -9,12 +9,8 @@ access_token_secret = "8t91piYB8hXXvCwSmAT7FMdY9pPoOxRy6LFkAsDa1sK50"
 
 if __name__ == "__main__":
     pullTweets()
-<<<<<<< Updated upstream
     keywordExtraction()
-=======
->>>>>>> Stashed changes
     # sentimentAnalysis()
-    # keywordExtraction()
 
 
 print("End")

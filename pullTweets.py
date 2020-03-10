@@ -34,7 +34,7 @@ def pullTweets():
             print(tweet.text)
             print("")
 
-            outF = open("pulledTweets.txt", "w")
+            outF = open("pulledTweets.txt", "w", encoding="utf8")
             # write line to output file
             outF.write(tweet.text + "\n")
             outF.close()
