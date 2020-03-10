@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f98c28f8-2a9e-4077-8fe0-a027c96df670" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/MajorProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MajorProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -1035,6 +1036,10 @@
       <change beforePath="$PROJECT_DIR$/venv/Scripts/python.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1177,12 +1182,19 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="706" y="130" key="SettingsEditor/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582119043883" />
+<<<<<<< Updated upstream
     <state x="344" y="38" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1583854542602" />
     <state x="466" y="259" width="658" height="315" key="com.intellij.ide.util.TipDialog" timestamp="1583855184640">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="655" y="364" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582759378908" />
     <state x="466" y="259" width="658" height="315" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1583855184640" />
+=======
+    <state x="655" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1583853705611">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="655" y="364" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583853705611" />
+>>>>>>> Stashed changes
     <state x="769" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581169490382">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
