@@ -13,10 +13,12 @@ def pullTweets():
     # Creating the API object and passing in auth information
     api = tweepy.API(auth)
 
+
+
     # Which twitter handle to pull from
     name = "realDonaldTrump"
     # Number of tweets to pull
-    tweetCount = 100
+    tweetCount = int(input("How many tweets do you wish to pull: "))
     # Pulls the extended tweet
 
     # Using the API object to get tweets from timeline
