@@ -23,7 +23,6 @@ def keywordExtraction():
 
     text_file = open("refinedTweets.txt", "w", encoding="utf8")
     text_file.write(removeLinks + '\n')
-    text_file.close()
 
     # Extracts keywords from data file and ranks them
     print("Extracting keywords")

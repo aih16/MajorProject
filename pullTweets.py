@@ -18,7 +18,7 @@ def pullTweets():
     # Which twitter handle to pull from
     name = "realDonaldTrump"
     # Number of tweets to pull
-    tweetCount = int(input("How many tweets do you wish to pull: "))
+    tweetCount = int(input("Number of Tweets to pull: "))
     # Pulls the extended tweet
 
     # Using the API object to get tweets from timeline
@@ -42,4 +42,3 @@ def pullTweets():
             outF = open("pulledTweets.txt", "w", encoding="utf8")
             # write line to output file
             outF.write(tweet.full_text + "\n")
-            outF.close()
