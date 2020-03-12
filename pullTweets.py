@@ -16,7 +16,7 @@ def pullTweets():
     # Which twitter handle to pull from
     name = "realDonaldTrump"
     # Number of tweets to pull
-    tweetCount = 10
+    tweetCount = 100
     # Pulls the extended tweet
 
     # Using the API object to get tweets from timeline

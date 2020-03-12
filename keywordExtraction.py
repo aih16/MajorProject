@@ -14,12 +14,16 @@ def keywordExtraction():
         print("Read file")
 
     print("Removing links from text")
-    removeLinks = re.sub(r'^https?:\/\/.*[\r\n]*', " ", data)
+    removeLinks = re.sub(r'https?:\/\/.*[\r\n]*', '', data, flags=re.MULTILINE)
     print("Links removed")
 
     print("Removing non letters from text")
     result = re.sub(r'[^a-zA-Z,]', " ", removeLinks)
     print("Non letters removed")
+
+    text_file = open("refinedTweets.txt", "w", encoding="utf8")
+    text_file.write(removeLinks + '\n')
+    text_file.close()
 
     # Extracts keywords from data file and ranks them
     print("Extracting keywords")
