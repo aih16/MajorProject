@@ -1,4 +1,6 @@
 import tweepy
+from textblob import TextBlob
+
 consumer_key = "6MhbZH5MI4Uxrl61LeSFhymkF"
 consumer_secret = "SVDcGLkrA8NCHIKH7bN5F8ZCxNUyxVE5zXQMSFMdjW9kKgSlWD"
 access_token = "3011525667-NPo9lLm3fFilJjyUYO6Xr5KiL5QDoZxV5daLTTq"
@@ -12,8 +14,6 @@ def pullTweets():
     auth.set_access_token(access_token, access_token_secret)
     # Creating the API object and passing in auth information
     api = tweepy.API(auth)
-
-
 
     # Which twitter handle to pull from
     name = "realDonaldTrump"
@@ -38,7 +38,8 @@ def pullTweets():
 
             print(tweet.full_text)
             print("")
-
+            
             outF = open("pulledTweets.txt", "w", encoding="utf8")
             # write line to output file
             outF.write(tweet.full_text + "\n")
+            outF.close()
