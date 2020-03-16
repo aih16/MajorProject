@@ -1,0 +1,22 @@
+trainingData = [
+        ('Thank you Sara. Keep writing, great talent!', 'pos'),
+        ('TODAY WE MAKE AMERICA GREAT AGAIN!', 'pos'),
+        ('Thank you @FoxNews "Huge win for President Trump and GOP in Georgia Congressional Special Election."', 'pos'),
+        ('God Bless the USA!', 'pos'),
+        ('Well deserved Jack. A great honor!', 'pos'),
+        ('Everybody is so well unified and working so hard. It is a beautiful thing to see. They love our great Country. We will end up being stronger than ever before!', 'pos'),
+        ('Cant believe they are not going after Schumer for the threats he made to our cherished United States Supreme Court, and our two great Justices. If a Republican did that, there would be an endless price to pay. Pathetic!', 'neg'),
+        ('PRESIDENTIAL HARASSMENT!', 'neg'),
+        ('So much FAKE NEWS!', 'neg'),
+        ('Sleepy Joe Biden was in charge of the H1N1 Swine Flu epidemic which killed thousands of people. The response was one of the worst on record. Our response is one of the best, with fast action of border closings & a 78% Approval Rating, the highest on record. His was lowest!', 'neg'),
+        ('I must say, that was a VERY boring debate. Biden lied when he said I want to cut Social Security and Medicare. Thats what they ALL said 4 years ago, and nothing happened, in fact, I saved Social Security and Medicare. I will not be cutting, but they will. Be careful!', 'neg'),
+        ('The Fake and Corrupt News never called Google. They said this was not true. Even in times such as these, they are not truthful. Watch for their apology, it wont happen. More importantly, thank you to Google!', 'neg')
+    ]
+    testingData = [
+        ('Good for the consumer, gasoline prices coming down!', 'pos'),
+        ('TODAY IS A NATIONAL DAY OF PRAYER. GOD BLESS EVERYONE!', 'pos'),
+        ('Thank you Gavin. Team is doing a great job!', 'pos'),
+        ('Going to be a BAD day for Crazy Bernie!', 'neg'),
+        ('The New York Times is an embarrassment to journalism. They were a dead paper before I went into politics, and they will be a dead paper after I leave, which will be in 5 years. Fake News is the Enemy of the people!', 'neg'),
+        ('Our pathetic, slow moving Federal Reserve, headed by Jay Powell, who raised rates too fast and lowered too late, should get our Fed Rate down to the levels of our competitor nations. They now have as much as a two point advantage, with even bigger currency help. Also, stimulate!', 'neg')
+    ]
