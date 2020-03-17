@@ -1,12 +1,15 @@
 trainingData = [
+        # Positive
         ('Thank you Sara. Keep writing, great talent!', 'pos'),
         ('TODAY WE MAKE AMERICA GREAT AGAIN!', 'pos'),
         ('Thank you @FoxNews "Huge win for President Trump and GOP in Georgia Congressional Special Election."', 'pos'),
         ('God Bless the USA!', 'pos'),
         ('Well deserved Jack. A great honor!', 'pos'),
         ('Everybody is so well unified and working so hard. It is a beautiful thing to see. They love our great Country. We will end up being stronger than ever before!', 'pos'),
-        ('Cant believe they are not going after Schumer for the threats he made to our cherished United States Supreme Court, and our two great Justices. If a Republican did that, there would be an endless price to pay. Pathetic!', 'neg'),
+
+        # Negative
         ('PRESIDENTIAL HARASSMENT!', 'neg'),
+        ('The “Times” is a disgrace to journalism!', 'neg'),
         ('So much FAKE NEWS!', 'neg'),
         ('Sleepy Joe Biden was in charge of the H1N1 Swine Flu epidemic which killed thousands of people. The response was one of the worst on record. Our response is one of the best, with fast action of border closings & a 78% Approval Rating, the highest on record. His was lowest!', 'neg'),
         ('I must say, that was a VERY boring debate. Biden lied when he said I want to cut Social Security and Medicare. Thats what they ALL said 4 years ago, and nothing happened, in fact, I saved Social Security and Medicare. I will not be cutting, but they will. Be careful!', 'neg'),
