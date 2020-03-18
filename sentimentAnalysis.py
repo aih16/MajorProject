@@ -9,12 +9,10 @@ def SA():
     with open("testingData.csv", 'r') as fp:
         print("Testing data accuracy", cl.accuracy(fp))
 
-    cl.show_informative_features(10)
-    DemoInput = input("Please provide a test input: ")
+    cl.show_informative_features(5)
+    demoInput = input("Please provide a test input: ")
+    demoInput = TextBlob(demoInput, classifier=cl)
 
-
-    blobInput = TextBlob(DemoInput, classifier=cl)
-
-    for s in blobInput.sentences:
+    for s in demoInput.sentences:
         print(s)
         print(s.classify())
