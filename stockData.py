@@ -4,13 +4,14 @@ import yfinance as yf
 def stockData():
 
     # Define the ticker symbol
-    tickerSymbol = 'USD'
+    tickerSymbol = 'MSFT'
 
     # Get data on this ticker
     tickerData = yf.Ticker(tickerSymbol)
 
     # Get the historical prices for this ticker
-    tickerDf = tickerData.history(period='1d', start='2020-1-1', end='2020-3-17')
+    print("Please provide time frame for stock")
+    tickerDf = tickerData.history(period='1d', start=input("Start date (YYYY-MM-DD):"), end=input("End date (YYYY-MM-DD):"))
 
     # Open: the stock price at the beginning of that day/month/year
     # High: the highest price the stock achieved that day/month/year
