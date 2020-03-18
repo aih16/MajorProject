@@ -1,6 +1,4 @@
 import tweepy
-from textblob import TextBlob
-import csv
 
 consumer_key = "6MhbZH5MI4Uxrl61LeSFhymkF"
 consumer_secret = "SVDcGLkrA8NCHIKH7bN5F8ZCxNUyxVE5zXQMSFMdjW9kKgSlWD"
@@ -31,15 +29,11 @@ def pullTweets():
         # pulls tweets ignoring retweets
         if 'RT @' not in myTimeline_tweets:
 
-            """# printing the text stored inside the tweet object
-            print("Time of Tweet:")
-            print(tweet.created_at)
+            # Printing the text stored inside the tweet object
+            print("Time of Tweet:", tweet.created_at)
+            print("Twitter handle and place:", tweet.user.screen_name, tweet.user.location)
+            print(tweet.full_text, "\n")
 
-            print("Twitter handle and place:")
-            print(tweet.user.screen_name, tweet.user.location)
-
-            print(tweet.full_text)"""
-
-            with open("pulledTweets.txt", "w", encoding="utf8") as outputFile:
+            with open("pulledTweets.txt", "a", encoding="utf8") as outputFile:
                 outputFile.writelines(tweet.full_text)
                 outputFile.writelines("\n")
