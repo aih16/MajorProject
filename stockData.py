@@ -4,7 +4,7 @@ import yfinance as yf
 def stockData():
 
     # Define the ticker symbol
-    tickerSymbol = 'MSFT'
+    tickerSymbol = input("Enter ticket symbol: ")
 
     # Get data on this ticker
     tickerData = yf.Ticker(tickerSymbol)
