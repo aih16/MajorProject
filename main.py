@@ -5,8 +5,9 @@ from stockData import stockData
 
 if __name__ == "__main__":
     # pullTweets()
+    # Not needed since tweets have been gathered manually from archives
     # keywordExtraction()
-    # SA()
-    stockData()
+    SA()
+    # stockData()
 
 print("End")
