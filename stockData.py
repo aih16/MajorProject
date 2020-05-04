@@ -1,4 +1,5 @@
 import yfinance as yf
+import numpy as np
 
 
 def stockData():
@@ -19,8 +20,14 @@ def stockData():
     # Low: the lowest price the stock achieved that day/month/year
     # Volume: How many shares were traded that day/month/year
 
-    print(tickerDf)
+    # print(tickerDf)
+    # print(tickerDf.Open, tickerDf.Close)
 
     with open("stockList.txt", 'w') as f:
+        openValue = np.array([tickerDf.Open])
+        closeValue = np.array([tickerDf.Close])
+        differenceValue = closeValue - openValue
+        print(differenceValue)
+
         f.write("%s\n" % tickerDf)
         f.close()

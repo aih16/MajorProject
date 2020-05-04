@@ -2,7 +2,8 @@ from pullTweets import pullTweets
 from keywordExtraction import keywordExtraction
 from sentimentAnalysis import SA
 from stockData import stockData
-from removeStopwords import Sant
+# from removeStopwords import Sant
+from marketPredict import marketPredict
 
 if __name__ == "__main__":
     # pullTweets()
@@ -12,5 +13,6 @@ if __name__ == "__main__":
     SA()
     # stockData()
     # removeStopWords()
+    # marketPredict()
 
 print("End")

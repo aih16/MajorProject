@@ -3,10 +3,12 @@ from textblob import TextBlob
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+from rake_nltk import Rake
 
 
 def SA():
 
+    r = Rake()
     # Opens file and reads in training data
     # NB classifier trains using the read in data
     with open("trainingData.csv", 'r') as trainingdata:
@@ -47,10 +49,11 @@ def SA():
     # Converts list to string
     listToStr = ' '.join([str(elem) for elem in filtered_sentence])
 
+    extracted = r.extract_keywords_from_text("This is not going very well")
+    print(extracted)
+
     # Runs string through trained NB classifier
     finalString = TextBlob(listToStr, classifier=classifier)
 
-    # Prints sentences in string along with pos/neg classification
-    for s in finalString.sentences:
-        print(s)
-        print(s.classify())
+    # Print string followed by classification
+    print(finalString, finalString.classify())
