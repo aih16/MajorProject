@@ -22,7 +22,7 @@ def keywordExtraction():
 
     # Extracts keywords from data file and ranks them
     print("Extracting keywords")
-    extracted = r.extract_keywords_from_text(refinedTweets)
+    r.extract_keywords_from_text(refinedTweets)
     print("Keywords extracted")
 
     # Creates list of ranked keywords

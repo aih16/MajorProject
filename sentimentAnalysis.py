@@ -4,11 +4,10 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from rake_nltk import Rake
+import re
 
 
 def SA():
-
-    r = Rake()
     # Opens file and reads in training data
     # NB classifier trains using the read in data
     with open("trainingData.csv", 'r') as trainingdata:
@@ -18,8 +17,11 @@ def SA():
 
     # Opens file and reads in testing data
     # Prints testing data accuracy
+    # Not needed for final product
+    """
     with open("testingData.csv", 'r') as testingdata:
         print("Testing data accuracy", classifier.accuracy(testingdata))
+    """
 
     # Asks for user input
     userInput = input("Please provide a test input: ")
@@ -43,17 +45,25 @@ def SA():
         if w not in stop_words:
             filtered_sentence.append(w)
 
-    # Prints list to see what words have not been removed
-    print(filtered_sentence)
+    # Prints list to see new sentence with stopwords removed
+    print("Stopwords removed", filtered_sentence)
 
-    # Converts list to string
-    listToStr = ' '.join([str(elem) for elem in filtered_sentence])
+    r = Rake()
 
-    extracted = r.extract_keywords_from_text("This is not going very well")
-    print(extracted)
+    # Extract keywords from remaining text
+    r.extract_keywords_from_sentences(filtered_sentence)
+
+    # Rank the extracted keywords
+    ranked_phrases = r.get_ranked_phrases()
+
+    # Print extracted keywords
+    print("Ranked Phrases", ranked_phrases)
+
+    # Converts extracted keywords list to string
+    listToStr = ' '.join([str(elem) for elem in ranked_phrases])
 
     # Runs string through trained NB classifier
     finalString = TextBlob(listToStr, classifier=classifier)
 
     # Print string followed by classification
-    print(finalString, finalString.classify())
+    print("String followed by classification: ", finalString, finalString.classify())
