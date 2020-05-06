@@ -1,9 +1,6 @@
 from rake_nltk import Rake
 import re
 
-# Convert csv to string for when you pull from the actual csv of Trumps tweets
-# https://stackoverflow.com/questions/3305926/python-csv-string-to-array
-
 
 def keywordExtraction():
     r = Rake()
@@ -20,15 +17,19 @@ def keywordExtraction():
     text_file = open("refinedTweets.txt", "w", encoding="utf8")
     text_file.write(refinedTweets + '\n')
 
+    userInput = input("Please provide a test input: ")
+
     # Extracts keywords from data file and ranks them
     print("Extracting keywords")
-    r.extract_keywords_from_text(refinedTweets)
+    r.extract_keywords_from_text(userInput)
     print("Keywords extracted")
 
     # Creates list of ranked keywords
     print("Ranking keywords")
     ranked_phrases = r.get_ranked_phrases()
     print("Keywords ranked")
+
+    print(ranked_phrases)
 
     # Creates file named ranked_phrases and adds the ranked keywords
     text_file = open("ranked_phrases.txt", "w", encoding="utf8")
