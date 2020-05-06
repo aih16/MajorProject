@@ -12,15 +12,15 @@ def SA():
     with open("trainingData.csv", 'r') as trainingdata:
         classifier = NaiveBayesClassifier(trainingdata, format="csv")
         print("Training Data")
-        classifier.show_informative_features(30)
+        classifier.show_informative_features(5)
 
     # Opens file and reads in testing data
     # Prints testing data accuracy
     # Not needed for final product
-    """
+
     with open("testingData.csv", 'r') as testingdata:
         print("Testing data accuracy", classifier.accuracy(testingdata))
-    """
+
 
     # Asks for user input
     userInput = input("Please provide a test input: ")
@@ -47,11 +47,15 @@ def SA():
     # Prints list to see new sentence with stopwords removed
     print("Stopwords removed", filtered_sentence)
 
-    # Converts extracted keywords list to string
-    listToStr2 = ' '.join([str(elem) for elem in filtered_sentence])
+    # Converts the filtered stop word sentence to string
+    stringWithoutStopwords = ' '.join([str(elem) for elem in filtered_sentence])
 
-    r.extract_keywords_from_text(listToStr2)
+    print("String without stopwords: ", stringWithoutStopwords)
 
+    # Extracts keywords from the filtered sentence
+    r.extract_keywords_from_text(stringWithoutStopwords)
+
+    # Ranks the keywords that have been extracted
     ranked_phrases = r.get_ranked_phrases()
 
     print("Ranked phrases: ", ranked_phrases)
