@@ -25,24 +25,11 @@ def SA():
     # Asks for user input
     userInput = input("Please provide a test input: ")
 
-    # Extracts keywords from data file and ranks them
-    r.extract_keywords_from_text(userInput)
-
-    # Creates list of ranked keywords
-    ranked_phrases = r.get_ranked_phrases()
-
-    print("Ranked phrases: ", ranked_phrases)
-
-    # Converts extracted keywords list to string
-    listToStr2 = ' '.join([str(elem) for elem in ranked_phrases])
-
-    print("Keywords converted to string: ", listToStr2)
-
     # Defines stopwords
     stop_words = set(stopwords.words('english'))
 
     # Takes user input, removes stopwords
-    word_tokens = word_tokenize(listToStr2)
+    word_tokens = word_tokenize(userInput)
 
     # Creates list size based on number of words left after stop words are removed
     filtered_sentence = [w for w in word_tokens if not w in stop_words]
@@ -61,7 +48,16 @@ def SA():
     print("Stopwords removed", filtered_sentence)
 
     # Converts extracted keywords list to string
-    listToStr = ' '.join([str(elem) for elem in filtered_sentence])
+    listToStr2 = ' '.join([str(elem) for elem in filtered_sentence])
+
+    r.extract_keywords_from_text(listToStr2)
+
+    ranked_phrases = r.get_ranked_phrases()
+
+    print("Ranked phrases: ", ranked_phrases)
+
+    # Converts extracted keywords list to string
+    listToStr = ' '.join([str(elem) for elem in ranked_phrases])
 
     # Runs string through trained NB classifier
     finalString = TextBlob(listToStr, classifier=classifier)
