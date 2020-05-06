@@ -1,13 +1,12 @@
 from textblob.classifiers import NaiveBayesClassifier
 from textblob import TextBlob
-import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from rake_nltk import Rake
-import re
 
 
 def SA():
+    r = Rake()
     # Opens file and reads in training data
     # NB classifier trains using the read in data
     with open("trainingData.csv", 'r') as trainingdata:
@@ -48,13 +47,11 @@ def SA():
     # Prints list to see new sentence with stopwords removed
     print("Stopwords removed", filtered_sentence)
 
-    r = Rake()
-
     # Extract keywords from remaining text
     r.extract_keywords_from_sentences(filtered_sentence)
 
     # Rank the extracted keywords
-    ranked_phrases = r.get_ranked_phrases()
+    ranked_phrases = r.get_ranked_phrases_with_scores()
 
     # Print extracted keywords
     print("Ranked Phrases", ranked_phrases)
