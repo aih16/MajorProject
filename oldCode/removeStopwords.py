@@ -5,7 +5,7 @@ from nltk.tokenize import word_tokenize
 
 def removeStopWords():
 
-    with open("trainingData.csv", 'r') as testingdata:
+    with open("../trainingData.csv", 'r') as testingdata:
         sentence = testingdata.read()
 
         stop_words = set(stopwords.words('english'))

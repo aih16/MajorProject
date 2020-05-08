@@ -6,7 +6,7 @@ def keywordExtraction():
     r = Rake()
 
     # Opens file, reads contents and stores in string 'data'
-    with open("trainingData.csv", 'r') as file:
+    with open("../trainingData.csv", 'r') as file:
         data = file.read()
         print("Read file")
 
