@@ -71,3 +71,9 @@ def SA():
 
     # Print string followed by classification
     print("String followed by classification: ", finalString, finalString.classify())
+    if finalString.classify() == ("pos"):
+        binaryClassify = 1
+    else:
+        binaryClassify = 0
+
+    print(binaryClassify)

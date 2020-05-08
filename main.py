@@ -3,8 +3,8 @@ from marketPredict import marketPredict
 from dollarSA import dollarSA
 
 if __name__ == "__main__":
-    dollarSA()
-    # SA()
-    # marketPredict()
+    # dollarSA()
+    SA()
+    marketPredict()
 
 print("End")
