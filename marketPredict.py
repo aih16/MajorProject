@@ -10,8 +10,8 @@ def marketPredict():
     # Pass the Sentiment Classification (0 = negative, 1 = positive)
     # Use the trained model to guess whether the market will go up or down
     totalAccuracy = 0
-    
-    for x in range(50):
+    runTimes = 50
+    for x in range(runTimes):
         df = pd.read_csv('FSMC.csv')
         x = df.drop('marketChange', axis=1)
         y = df['marketChange']
@@ -27,8 +27,8 @@ def marketPredict():
         print(accuracy)
         totalAccuracy = totalAccuracy + accuracy
 
-    meanAccuracy = totalAccuracy/50
-    print("Average Accuracy after 50 tests: ", meanAccuracy)
+    meanAccuracy = totalAccuracy/runTimes
+    print("Average Accuracy after", runTimes, "tests: ", meanAccuracy)
 
     """
     s = pickle.dumps(model)
