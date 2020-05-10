@@ -8,7 +8,7 @@ def CountVector():
     # Uses CountVectorizer
     with open("dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
         # create the transform
-        vectorizer = CountVectorizer(max_features=3000)
+        vectorizer = CountVectorizer(max_features=1000)
 
         corpus = vectorData
 

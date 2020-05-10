@@ -10,12 +10,12 @@ def marketPredict():
     # Pass the Sentiment Classification (0 = negative, 1 = positive)
     # Use the trained model to guess whether the market will go up or down
     totalAccuracy = 0
-    runTimes = 50
+    runTimes = 1000
     for x in range(runTimes):
         df = pd.read_csv('FSMC.csv')
         x = df.drop('marketChange', axis=1)
         y = df['marketChange']
-        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25)
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.50)
 
         model = GaussianNB()
         model.fit(x_train, y_train)
