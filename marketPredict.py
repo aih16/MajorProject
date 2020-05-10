@@ -9,20 +9,26 @@ def marketPredict():
 
     # Pass the Sentiment Classification (0 = negative, 1 = positive)
     # Use the trained model to guess whether the market will go up or down
+    totalAccuracy = 0
+    
+    for x in range(50):
+        df = pd.read_csv('FSMC.csv')
+        x = df.drop('marketChange', axis=1)
+        y = df['marketChange']
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25)
 
-    df = pd.read_csv('FSMC.csv')
-    x = df.drop('marketChange', axis=1)
-    y = df['marketChange']
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25)
+        model = GaussianNB()
+        model.fit(x_train, y_train)
 
-    model = GaussianNB()
-    model.fit(x_train, y_train)
+        y_pred = model.predict(x_test)
+        print(y_pred)
 
-    y_pred = model.predict(x_test)
-    print(y_pred)
+        accuracy = accuracy_score(y_test, y_pred) * 100
+        print(accuracy)
+        totalAccuracy = totalAccuracy + accuracy
 
-    accuracy = accuracy_score(y_test, y_pred)*100
-    print(accuracy)
+    meanAccuracy = totalAccuracy/50
+    print("Average Accuracy after 50 tests: ", meanAccuracy)
 
     """
     s = pickle.dumps(model)

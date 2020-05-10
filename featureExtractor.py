@@ -3,21 +3,19 @@ from numpy import asarray
 from numpy import savetxt
 
 
-
 def CountVector():
 
     # Uses CountVectorizer
-
     with open("dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
         # create the transform
-        vectorizer = CountVectorizer()
+        vectorizer = CountVectorizer(max_features=3000)
 
-        # corpus = vectorData
+        corpus = vectorData
 
-        corpus = ['This is the first document.',
-                  'This is the second second document.',
-                  'And the third one.',
-                  'Is this the first document?', ]
+        #corpus = ['This is the first document.',
+        #          'This is the second second document.',
+        #          'And the third one.',
+        #          'Is this the first document?', ]
 
         # tokenize and build vocab
         vector = vectorizer.fit_transform(corpus)
@@ -32,8 +30,10 @@ def CountVector():
         data = asarray(vectorArray)
         savetxt('extractedFeatures.csv', data, delimiter=',')
 
+
+def TFIDF():
+
     # Uses TF-IDF
-    """
     with open("dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
 
         # corpus = vectorData
@@ -58,10 +58,11 @@ def CountVector():
 
         # summarize encoded vector
         print('vectors: ', vector.toarray())
-    """
+
+
+def CountVectorLine():
 
     # Prints each separate records to a line
-    """
     with open("dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
         for line in vectorData:
             input = line.strip()
@@ -81,4 +82,3 @@ def CountVector():
 
             features_left = [vector.toarray()]
             print(features_left)
-    """
