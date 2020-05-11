@@ -1,11 +1,9 @@
-from textblob.classifiers import NaiveBayesClassifier
-from textblob import TextBlob
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
 def removeStopWords():
 
-    with open("../trainingData.csv", 'r') as testingdata:
+    with open("../datasets/trainingData.csv", 'r') as testingdata:
         sentence = testingdata.read()
 
         stop_words = set(stopwords.words('english'))

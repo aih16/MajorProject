@@ -1,21 +1,18 @@
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 from numpy import asarray
 from numpy import savetxt
 
 
 def CountVector():
 
-    # Uses CountVectorizer
-    with open("dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
+    # Uses CountVectorizer for extracting features
+    with open("datasets/dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
+
         # create the transform
         vectorizer = CountVectorizer(max_features=1000)
 
         corpus = vectorData
-
-        #corpus = ['This is the first document.',
-        #          'This is the second second document.',
-        #          'And the third one.',
-        #          'Is this the first document?', ]
 
         # tokenize and build vocab
         vector = vectorizer.fit_transform(corpus)
@@ -28,20 +25,15 @@ def CountVector():
         print(vectorArray)
 
         data = asarray(vectorArray)
-        savetxt('extractedFeatures.csv', data, delimiter=',')
+        savetxt('datasets/extractedFeatures.csv', data, delimiter=',')
 
 
 def TFIDF():
 
-    # Uses TF-IDF
-    with open("dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
+    # Uses TF-IDF for extracting features
+    with open("datasets/dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
 
-        # corpus = vectorData
-
-        corpus = ['This is the first document.',
-                  'This is the second second document.',
-                  'And the third one.',
-                  'Is this the first document?', ]
+        corpus = vectorData
 
         # create the transform
         vectorizer = TfidfVectorizer()
@@ -62,8 +54,8 @@ def TFIDF():
 
 def CountVectorLine():
 
-    # Prints each separate records to a line
-    with open("dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
+    # Prints each separate records to a line for extracting features
+    with open("datasets/dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
         for line in vectorData:
             input = line.strip()
 

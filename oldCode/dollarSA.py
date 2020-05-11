@@ -16,7 +16,7 @@ def dollarSA():
     r = Rake()
     # Opens file and reads in training data
     # NB classifier trains using the read in data
-    with open("trainingData.csv", 'r') as trainingdata:
+    with open("../datasets/trainingData.csv", 'r') as trainingdata:
         classifier = NaiveBayesClassifier(trainingdata, format="csv")
         print("Training Data")
         classifier.show_informative_features(5)
@@ -25,7 +25,7 @@ def dollarSA():
     # Prints testing data accuracy
     # Not needed for final product
 
-    with open("testingData.csv", 'r') as testingdata:
+    with open("../datasets/testingData.csv", 'r') as testingdata:
         print("Testing data accuracy", classifier.accuracy(testingdata))
 
 
