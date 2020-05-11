@@ -6,10 +6,10 @@ from marketPredict import LogiR
 
 if __name__ == "__main__":
     # SA()
-    # CountVector()
+    CountVector()
     # GNB()
     # MNB()
-    LogiR()
-    print("No methods running")
+    # LogiR()
+    print("No more methods running")
 
 print("End")

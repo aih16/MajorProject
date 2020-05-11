@@ -10,20 +10,22 @@ def CountVector():
     with open("datasets/dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
 
         # create the transform
-        vectorizer = CountVectorizer(max_features=3000)
+        vectorizer = CountVectorizer()
 
         corpus = vectorData
 
-        # tokenize and build vocab
+        # tokenize and builds vocab
         vector = vectorizer.fit_transform(corpus)
 
         # summarize encoded vector
         print(vector.shape)
         print(vectorizer.get_feature_names())
 
+        # creates array from extracted features
         vectorArray = vector.toarray()
         print(vectorArray)
 
+        # saves the array of features
         data = asarray(vectorArray)
         savetxt('datasets/extractedFeatures.csv', data, delimiter=',')
 

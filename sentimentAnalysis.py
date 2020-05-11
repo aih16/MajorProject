@@ -13,7 +13,7 @@ def SA():
     with open("datasets/trainingData.csv", 'r') as trainingdata:
         classifier = NaiveBayesClassifier(trainingdata, format="csv")
         print("Training Data")
-        classifier.show_informative_features(5)
+        classifier.show_informative_features(15)
 
     # Opens file and reads in testing data
     # Prints testing data accuracy
@@ -26,6 +26,7 @@ def SA():
     # Asks for user input
     userInput = input("Please provide a test input: ")
 
+    # Removes all non letter characters
     regex = re.compile('[^a-zA-Z ]')
     punctuationRemoved = regex.sub('', userInput)
     print("Punctuation removed: ", punctuationRemoved)

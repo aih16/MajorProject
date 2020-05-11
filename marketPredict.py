@@ -12,29 +12,33 @@ import pickle
 
 runTimes = 1000
 
-def GNB():
 
-    # Pass the Sentiment Classification (0 = negative, 1 = positive)
-    # Use the trained model to guess whether the market will go up or down
+def GNB():
 
     print("Running Gaussian Naive Bayes")
     totalAccuracy = 0
     for x in range(runTimes):
+        # reads in the data set as a pandas data frame
         df = pd.read_csv('datasets/FSMC.csv')
+        # defines the x and y from the data set
         x = df.drop('marketChange', axis=1)
         y = df['marketChange']
         x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25)
 
+        # trains the GaussianNB model
         model = GaussianNB()
         model.fit(x_train, y_train)
 
+        # predicts the y outcome using the test data
         y_pred = model.predict(x_test)
         print(y_pred)
 
+        # gives accuracy of prediction
         accuracy = accuracy_score(y_test, y_pred) * 100
         print(accuracy)
         totalAccuracy = totalAccuracy + accuracy
 
+    # provides mean accuracy after x amount of runs
     meanAccuracy = totalAccuracy/runTimes
     print("Average Accuracy after", runTimes, "tests: ", meanAccuracy)
 
@@ -86,7 +90,6 @@ def LogiR():
         # fit the model with data
         logreg.fit(x_train, y_train)
 
-        #
         y_pred = logreg.predict(x_test)
 
         cnf_matrix = metrics.confusion_matrix(y_test, y_pred)
@@ -99,16 +102,20 @@ def LogiR():
     meanAccuracy = totalAccuracy / runTimes
     print("Average Accuracy after", runTimes, "tests: ", meanAccuracy)
 
-    class_names = [0, 1]  # name  of classes
+    # Testing some matplotlib functions
+    # provides a confusion matrix for the logistic regression
+    class_names = [0, 1]
     fig, ax = plt.subplots()
     tick_marks = np.arange(len(class_names))
     plt.xticks(tick_marks, class_names)
     plt.yticks(tick_marks, class_names)
 
-    # create heatmap
+    # creates heatmap
     sns.heatmap(pd.DataFrame(cnf_matrix), annot=True, cmap="YlGnBu", fmt='g')
     ax.xaxis.set_label_position("top")
     plt.tight_layout()
+
+    # titles and labels confusion matrix
     plt.title('Confusion matrix', y=1.1)
     plt.ylabel('Actual label')
     plt.xlabel('Predicted label')
