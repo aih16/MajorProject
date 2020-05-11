@@ -1,11 +1,15 @@
 from sentimentAnalysis import SA
-from marketPredict import marketPredict
 from featureExtractor import CountVector
+from marketPredict import GNB
+from marketPredict import MNB
+from marketPredict import LogiR
 
 if __name__ == "__main__":
     # SA()
     # CountVector()
-    marketPredict()
+    # GNB()
+    # MNB()
+    LogiR()
     print("No methods running")
 
 print("End")
