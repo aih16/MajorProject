@@ -6,7 +6,7 @@ from marketPredict import LogiR
 
 if __name__ == "__main__":
     # SA()
-    CountVector()
+    # CountVector()
     # GNB()
     # MNB()
     # LogiR()

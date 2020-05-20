@@ -9,8 +9,10 @@ def CountVector():
     # Uses CountVectorizer for extracting features
     with open("datasets/dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
 
+        userInput = int(input("Select max amount of features to extract: "))
+
         # create the transform
-        vectorizer = CountVectorizer()
+        vectorizer = CountVectorizer(max_features=userInput)
 
         corpus = vectorData
 
@@ -35,10 +37,12 @@ def TFIDF():
     # Uses TF-IDF for extracting features
     with open("datasets/dollarIndexTweets.txt", 'r', encoding='utf-8') as vectorData:
 
+        userInput = int(input("Select max amount of features to extract: "))
+
         corpus = vectorData
 
         # create the transform
-        vectorizer = TfidfVectorizer()
+        vectorizer = TfidfVectorizer(max_features=userInput)
 
         # tokenize and build vocab
         vectorizer.fit(corpus)

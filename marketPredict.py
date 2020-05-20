@@ -10,10 +10,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pickle
 
-runTimes = 1000
-
 
 def GNB():
+
+    runTimes = int(input("Number of test runs: "))
+    testSize = int(input("Test size: "))
 
     print("Running Gaussian Naive Bayes")
     totalAccuracy = 0
@@ -23,7 +24,7 @@ def GNB():
         # defines the x and y from the data set
         x = df.drop('marketChange', axis=1)
         y = df['marketChange']
-        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25)
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=testSize)
 
         # trains the GaussianNB model
         model = GaussianNB()
@@ -52,13 +53,16 @@ def GNB():
 
 def MNB():
 
+    runTimes = int(input("Number of test runs: "))
+    testSize = int(input("Test size: "))
+
     print("Running Multinomial Naive Bayes")
     totalAccuracy = 0
     for x in range(runTimes):
         df = pd.read_csv('datasets/FSMC.csv')
         x = df.drop('marketChange', axis=1)
         y = df['marketChange']
-        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25)
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=testSize)
 
         model = MultinomialNB()
         model.fit(x_train, y_train)
@@ -76,13 +80,16 @@ def MNB():
 
 def LogiR():
 
+    runTimes = int(input("Number of test runs: "))
+    testSize = int(input("Test size: "))
+
     print("Running LogiR")
     totalAccuracy = 0
     for x in range(runTimes):
         df = pd.read_csv('datasets/FSMC.csv')
         x = df.drop('marketChange', axis=1)
         y = df['marketChange']
-        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25)
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=testSize)
 
         # instantiate the model (using the default parameters)
         logreg = LogisticRegression()
